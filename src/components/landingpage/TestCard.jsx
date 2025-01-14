@@ -8,7 +8,7 @@ const TestCard = () => {
                 <img 
                 src={courseImage}
                 alt="Course image"
-                className=''
+                className='rounded-t-xl'
                 />
             </div>
     
