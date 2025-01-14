@@ -2,7 +2,7 @@ import React from 'react'
 import courseImage from "../../assets/download.jpg"
 const CourseCard = () => {
   return (
-    <div className='rounded-2xl flex flex-col gap-4 max-w-[23vw] border border-gray-400 '>
+    <div className='rounded-2xl flex flex-col gap-4 border border-gray-400 '>
         <div className=''>
             <img 
             src={courseImage}
