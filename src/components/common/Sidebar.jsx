@@ -11,7 +11,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className='bg-blue-100 h-screen font-sans flex flex-col px-[3vw] py-[4vw] gap-8 text-gray-600'>
+    <div className='bg-blue-100 hidden h-screen font-sans md:flex flex-col px-[3vw] py-[4vw] gap-8 text-gray-600'>
       <div className="font-bold">MENU</div>
       <div className='flex flex-col gap-6 text-[1.2vw]'>
         {menuItems.map((item, index) => (
