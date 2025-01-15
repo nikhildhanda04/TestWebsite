@@ -2,6 +2,10 @@ import React from 'react'
 import LNavbar from '../components/auth/Login/LNavbar'
 import Courses from '../components/auth/Login/Courses';
 import { FaArrowRightLong as RArrow } from "react-icons/fa6";
+import Stats from '../components/auth/Login/Stats';
+import Reviews from '../components/auth/Login/Reviews';
+import Features from '../components/auth/Login/Features/Features';
+import Footer from '../components/auth/Login/Footer';
 
 const Login = () => {
   return (
@@ -48,6 +52,17 @@ const Login = () => {
         </div>
       </div>
       <Courses />
+
+      <div className='px-[6vw]'>
+      <Stats />
+      </div>
+      <div className='px-[10vw]'>
+        <Reviews />
+      </div>
+      <div>
+        <Features />
+      </div>
+      <Footer />
     </div>
   )
 }

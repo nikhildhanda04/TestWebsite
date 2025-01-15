@@ -1,8 +1,18 @@
 import React, {useState} from 'react'
-
+import CourseCard from './CourseCard';
 
 const Courses = () => {
 
+  const course = [
+    { title: 'Banking'},
+    {title: 'SBI bank'},
+    {title: 'Banking'},
+    {title: 'Banking'},
+    {title: 'Banking'},
+    {title: 'Banking'},
+    {title: 'Banking'},
+    {title: 'Banking'},
+  ]
       const [selectedCategory, setSelectedCategory] = useState('Banking');
 
     const categories = [
@@ -14,7 +24,7 @@ const Courses = () => {
       ];
 
   return (
-    <div className='flex flex-col items-center justify-center py-[12vh]'>
+    <div className='flex flex-col text-center px-[2vw] items-center justify-center py-[12vh]'>
       <div className='font-[inter] text-2xl font-semibold'>
         Explore our range of Courses
       </div>
@@ -37,6 +47,17 @@ const Courses = () => {
           </button>
         ))}
       </div>
+
+      <div className='grid grid-cols-3 gap-5 md:grid-cols-8 my-[9vh]'>
+        {course.map((course) => (
+          <CourseCard
+            title={course.title}
+          />
+        ))}
+      </div>
+
+      
+    
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react' 
-import TestCard from '../components/landingpage/TestCard'
-import Banner from '../components/landingpage/Banner'
+import TestCard from '../components/home/TestCard'
+import Banner from '../components/home/Banner'
 import image1 from '../assets/baneer.jpg'
 import image2 from '../assets/download.jpg'
-const LandingPage = () => {
+const Home = () => {
 
   return (
     <div className='py-[8vh] flex flex-col items-center gap-24'>
@@ -23,4 +23,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default Home

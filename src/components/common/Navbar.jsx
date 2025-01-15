@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='flex px-[3vw] py-[1vw] items-center justify-between shadow-lg'>
       <Link 
-      to='/'
+      to='/home'
       >
       <div>
         Logo

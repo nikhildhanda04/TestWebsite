@@ -1,6 +1,6 @@
 import Layout from "./components/common/Layout"
 import LiveTest from "./screens/LiveTest"
-import LandingPage from "./screens/LandingPage"
+import Home from "./screens/Home"
 import Login from "./screens/Login"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 function App() {
@@ -10,8 +10,8 @@ function App() {
       <Layout> 
         <Routes>
           <Route path="/livetest" element={<LiveTest />} />
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<Login/>} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Login/>} />
         </Routes>
       </Layout>
     </Router>
