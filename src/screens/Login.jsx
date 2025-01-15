@@ -12,7 +12,7 @@ const Login = () => {
     <div>
       <LNavbar />
 
-      <div className='flex flex-col justify-center items-center md:flex-row gap-5 py-[13vh] px-[10vw]'>
+      <div className='flex flex-col text-center justify-center items-center md:flex-row gap-5 py-[13vh] px-[10vw]'>
         <div className='flex flex-col gap-8 '>
             <div className='font-[impact] text-5xl '>
             Practice | Analyse | Excel
