@@ -12,9 +12,9 @@ const LandingPage = () => {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-        <TestCard />
-        <TestCard />
-        <TestCard />
+        <TestCard  Desc="Description about the Test" Price="99" Mrp="399" Discount="70%"/>
+        <TestCard  Desc="Description about the Test" Price="99" Mrp="399" Discount="70%"/>
+        <TestCard  Desc="Description about the Test" Price="99" Mrp="399" Discount="70%"/>
         
       </div>
 

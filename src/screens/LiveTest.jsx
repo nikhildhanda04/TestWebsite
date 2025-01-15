@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CourseCard from '../components/livetest/CourseCard';
 
 const LiveTest = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+    const [selectedCategory, setSelectedCategory] = useState('All');
 
   const categories = [
     { name: 'All' },
