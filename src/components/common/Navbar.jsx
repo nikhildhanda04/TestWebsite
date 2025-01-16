@@ -17,13 +17,8 @@ const Navbar = () => {
           placeholder="Search.."
           className='px-[1vw] py-2 border hidden md:block bg-gray-100 border-gray-300 rounded-full'
         />
-        <button className='bg-blue-600 hidden md:block text-white py-3 px-5 rounded-full font-semibold'>
-            Signup
-        </button>
-        <button className='bg-blue-600 hidden md:block text-white py-3 px-5 rounded-full font-semibold'>
-            Login
-        </button>
-        <button className='md:hidden text-blue-700'>
+      
+        <button className='text-blue-700'>
           <User size={40}/>
         </button>
       </div>

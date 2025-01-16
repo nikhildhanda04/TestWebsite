@@ -26,7 +26,7 @@ const Courses = () => {
   return (
     <div className='flex flex-col text-center px-[2vw] items-center justify-center py-[12vh]'>
       <div className='font-[inter] text-2xl font-semibold'>
-        Explore our range of Courses
+        Explore our range of Tests
       </div>
       <div className='font-[inter] text-gray-500'>
       Select your exam below and give an immediate push to your preparation 

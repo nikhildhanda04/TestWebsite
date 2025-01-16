@@ -1,5 +1,6 @@
 import React from 'react'
 import courseImage from "../../assets/download.jpg"
+import {Link} from 'react-router-dom'
 
 const TestCard = ({Desc, Price, Mrp, Discount}, ) => {
   return (
@@ -31,9 +32,13 @@ const TestCard = ({Desc, Price, Mrp, Discount}, ) => {
                 </div>
             </div>
     
+            
             <button className='bg-blue-500 text-white py-3 rounded-full font-semibold'>
+            <Link to="/tests">
                 View Details
+            </Link>
             </button>
+            
             </div>
         </div>
   )
