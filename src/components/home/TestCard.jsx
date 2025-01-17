@@ -32,12 +32,12 @@ const TestCard = ({Desc, Price, Mrp, Discount}, ) => {
                 </div>
             </div>
     
-            
-            <button className='bg-blue-500 text-white py-3 rounded-full font-semibold'>
-            <Link to="/tests">
+            <a 
+            className='bg-blue-500 text-center text-white py-3 rounded-full font-semibold'
+            href="/tests"
+            >
                 View Details
-            </Link>
-            </button>
+            </a>
             
             </div>
         </div>

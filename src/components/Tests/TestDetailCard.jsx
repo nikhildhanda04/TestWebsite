@@ -13,11 +13,13 @@ const TestDetailCard = () => {
 
     <div className='flex flex-row '>
 
-    <button className='flex gap-2 items-center text-orange-500 border border-orange-500 rounded-lg p-1 ml-auto px-3 text-sm'>
+    <a 
+    className='flex gap-2 items-center text-orange-500 border border-orange-500 rounded-lg p-1 ml-auto px-3 text-sm'
+    href="/pricing"
+    >
       <Lock size={18}/>
       Unlock Now
-        
-    </button>
+    </a>
     </div>
     </div>
   )

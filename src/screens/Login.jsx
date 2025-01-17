@@ -6,6 +6,7 @@ import Stats from '../components/auth/Login/Stats';
 import Reviews from '../components/auth/Login/Reviews';
 import Features from '../components/auth/Login/Features/Features';
 import Footer from '../components/auth/Login/Footer';
+import LoginDialog from '../components/auth/Login/LoginDialog';
 
 const Login = () => {
   return (
@@ -45,9 +46,13 @@ const Login = () => {
                 </div>        
 
                 <div className='w-full'>
+                  <a
+                  href="/home"
+                  >
                     <button className='bg-green-400 text-white font-[inter] text-lg font-semibold p-2 rounded-lg w-full'>
                         Get Started 
                     </button>
+                  </a>
                 </div>        
         </div>
       </div>
