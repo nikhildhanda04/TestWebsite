@@ -24,7 +24,7 @@ const Courses = () => {
       ];
 
   return (
-    <div className='flex flex-col text-center px-[2vw] items-center justify-center py-[12vh]'>
+    <div className='flex flex-col text-center px-[2vw] items-center justify-center py-[15vh]'>
       <div className='font-[inter] text-2xl font-semibold'>
         Explore our range of Tests
       </div>

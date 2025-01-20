@@ -7,27 +7,33 @@ import Reviews from '../components/auth/Login/Reviews';
 import Features from '../components/auth/Login/Features/Features';
 import Footer from '../components/auth/Login/Footer';
 import LoginDialog from '../components/auth/Login/LoginDialog';
+import Herobg from '../assets/herobg.png'
 
 const Login = () => {
   return (
     <div>
+      <img
+      src={Herobg}
+      className='absolute opacity-90 z-1'
+      />
+      <div className='absolute z-99'>
       <LNavbar />
 
-      <div className='flex flex-col text-center justify-center items-center md:flex-row gap-5 py-[13vh] px-[10vw]'>
-        <div className='flex flex-col gap-8 '>
+      <div className='flex flex-col text-center text-white justify-center items-center md:flex-row gap-5 py-[12vh] px-[10vw]'>
+        <div className='flex flex-col items-center gap-8 '>
             <div className='font-[impact] text-5xl '>
             Practice | Analyse | Excel
             </div>
             <div className='font-[inter] text-xl'>
             Join the best and most affordable online platform for your banking and government exam preparation needs
             </div>
-            <div className='font-[inter] flex flex-row items-center gap-3'>
+            <div className='font-[inter] font-bold flex flex-row items-center gap-3'>
                 Start Now
                 <RArrow size={30}/>
             </div>
         </div>
 
-        <div className='bg-gray-100 flex flex-col gap-7 py-10 px-7 rounded-lg items-center'>
+        <div className='bg-gray-100 text-black flex flex-col gap-7 py-10 px-7 rounded-lg items-center'>
                 <div className='text-center font-[inter]'>
                 Join our hands to make your journey to success easier
                 </div>
@@ -68,6 +74,7 @@ const Login = () => {
         <Features />
       </div>
       <Footer />
+      </div>
     </div>
   )
 }
