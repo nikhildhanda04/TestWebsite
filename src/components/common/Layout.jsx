@@ -8,8 +8,9 @@ const Layout = ({ children }) => {
   const location = useLocation();
   const isLoginPage = location.pathname === '/';
   const isSignupPage = location.pathname === '/signup';
+  const isTestWindow = location.pathname === '/testwindow';
 
-  if (isLoginPage || isSignupPage) {
+  if (isLoginPage || isSignupPage || isTestWindow) {
     return <>{children}</>;
   }
 
