@@ -11,7 +11,7 @@ const Navbar = () => {
             SBI Clerk 2024
         </div>
         <div>
-            Ready to Take the Test?
+            Ready to Take the Test? <span className='cursor-pointer'><a href="/quiz" className='text-yellow-300 hover:text-yellow-500'>Start</a></span>
         </div>
       </div>
     </>

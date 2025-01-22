@@ -4,7 +4,8 @@ import Home from "./screens/Home"
 import Login from "./screens/Login"
 import Tests from "./screens/Tests"
 import Pricing from "./screens/Pricing"
-import TestWindow from "./screens/TestWindow/TestWindow"
+import TestWindow from "./screens/TestWindow/Instructions"
+import Quiz from "./screens/TestWindow/Quiz"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/tests" element={<Tests />} />
           <Route path="/pricing" element={<Pricing/>} />
           <Route path="/testwindow" element={<TestWindow/>} />
+          <Route path="/quiz" element={<Quiz/>} />
         </Routes>
       </Layout>
     </Router>

@@ -9,8 +9,9 @@ const Layout = ({ children }) => {
   const isLoginPage = location.pathname === '/';
   const isSignupPage = location.pathname === '/signup';
   const isTestWindow = location.pathname === '/testwindow';
+  const isQuiz = location.pathname === '/quiz';
 
-  if (isLoginPage || isSignupPage || isTestWindow) {
+  if (isLoginPage || isSignupPage || isTestWindow || isQuiz) {
     return <>{children}</>;
   }
 
