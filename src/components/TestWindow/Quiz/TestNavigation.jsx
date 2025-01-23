@@ -1,28 +1,12 @@
 import React from 'react';
-
+import NavigationRules from './NavigationRules';
 const TestNavigation = () => {
   return (
     <div className="flex flex-col font-[inter] p-6 bg-gray-100 min-h-screen">
     
       <div className="bg-white p-4 shadow-md ">
         <div className="text-lg font-semibold mb-4">Hello, nikhildhanda84</div>
-        <div className="flex justify-between text-sm text-gray-600">
-          <div>
-            <span className="font-bold">1</span> Answered
-          </div>
-          <div>
-            <span className="font-bold">0</span> Marked
-          </div>
-          <div>
-            <span className="font-bold">31</span> Not Visited
-          </div>
-          <div>
-            <span className="font-bold">0</span> Marked and Answered
-          </div>
-          <div>
-            <span className="font-bold">3</span> Not Answered
-          </div>
-        </div>
+        <NavigationRules />
       </div>
 
       <div className="bg-white p-4 shadow-md">

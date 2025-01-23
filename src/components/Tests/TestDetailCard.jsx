@@ -4,6 +4,11 @@ import { FaRegQuestionCircle as Ques, FaRegClock as Clock } from "react-icons/fa
 import { IoCheckmarkSharp as Tick } from "react-icons/io5";
 
 const TestDetailCard = ({ Title, Questions, Time, Marks, Button, ButtonBorderColor = "#3b82f6" }) => {
+  const openInNewWindow = (url, event) => {
+    event.preventDefault();
+    window.open(url, 'newwindow', 'width=1200,height=900,menubar=no,toolbar=no,resizable=no');
+  };
+
   const Icon = Button === "Unlock Now" ? Lock : Unlock;
 
   return (
@@ -24,9 +29,10 @@ const TestDetailCard = ({ Title, Questions, Time, Marks, Button, ButtonBorderCol
 
       <div className='flex flex-row'>
         <a
+          href="/testwindow"
           className='flex gap-2 items-center border rounded-lg p-1 ml-auto px-3 text-sm'
           style={{ borderColor: ButtonBorderColor, color: ButtonBorderColor }}
-          href="/testwindow"
+          onClick={(event) => openInNewWindow('/testwindow', event)}
         >
           <Icon size={18} style={{ color: ButtonBorderColor }} />
           {Button}
