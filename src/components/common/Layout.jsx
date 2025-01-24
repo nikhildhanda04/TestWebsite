@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
     return <>{children}</>;
   }
 
-  return (
+  return (  
     <div className="flex flex-col h-screen font-sans">
       <Navbar />
       <div className="flex flex-1 overflow-hidden">
