@@ -30,10 +30,10 @@ const Tests = () => {
       <div className='grid grid-col-1 md:grid-cols-3 gap-7'>
       <TestDetailCard Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90' Button="Take Test"/>
       <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90' Button="Unlock Now" ButtonBorderColor='#ef4444' />
-      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90' Button="Unlock Now"/>
-      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90' Button='Unlock Now'/>
-      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90'Button='Unlock Now'/>
-      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90'Button='Unlock Now'/>
+      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90' Button="Unlock Now"  ButtonBorderColor='#ef4444'/>
+      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90' Button='Unlock Now' ButtonBorderColor='#ef4444'/>
+      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90'Button='Unlock Now' ButtonBorderColor='#ef4444'/>
+      <TestDetailCard  Title="Bank Clerk 1" Questions='60' Time='2 Hours' Marks='90'Button='Unlock Now' ButtonBorderColor='#ef4444'/>
       </div>
       </div>
     </div>

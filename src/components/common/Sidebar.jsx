@@ -14,8 +14,7 @@ const Sidebar = () => {
 
   const menuItems = [
     { icon: <Cap />, label: 'Live Test', path: '/livetest' },
-    { icon: <Paper />, label: 'Free Test' },
-    { icon: <Cap />, label: 'Youtube Classes' },
+    { icon: <Paper />, label: 'Free Test', path:'/freetests' },
   ];
 
   return (
