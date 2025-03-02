@@ -1,47 +1,55 @@
-import React from 'react'
-import courseImage from "../../assets/download.jpg"
-import {Link} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import TestCard from '../../components/home/TestCard';
+import Banner from '../../components/home/Banner';
+import image1 from '../../assets/baneer.jpg';
+import image2 from '../../assets/download.jpg';
 
-const TestCard = ({Desc, Price, Mrp, Discount}, ) => {
+const Home = () => {
+  const [tests, setTests] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTests = async () => {
+      try {
+        const response = await fetch('https://pw-backend-livid.vercel.app/api/v1/testSeries/getTestSeries');
+        const data = await response.json();
+        setTests(data.testSeries || []);
+      } catch (error) {
+        console.error("Error fetching test series:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchTests();
+  }, []);
+
   return (
-        <div className='rounded-2xl flex flex-col gap-4 border border-gray-400 '>
-            <div className=''>
-                <img 
-                src={courseImage}
-                alt="Course image"
-                className='rounded-t-xl'
-                />
-            </div>
-    
-            <div className='p-4 flex flex-col gap-12'>
-            <div className='font-[inter] font-semibold leading-7'>
-            {Desc}
-            </div>
-    
-        
-            <div className='flex flex-row font-[inter] justify-between font-semibold '>
-                <div className='flex gap-2'>
-                ₹{Price}
-                <div className='line-through text-gray-400'>
-                ₹{Mrp}
-                </div>
-    
-                </div>
-                <div className='text-green-500'>
-                    {Discount} Off
-                </div>
-            </div>
-    
-            <a 
-            className='bg-blue-500 text-center text-white py-3 rounded-full font-semibold'
-            href="/tests"
-            >
-                View Details
-            </a>
-            
-            </div>
-        </div>
-  )
-}
+    <div className='py-[8vh] flex flex-col items-center gap-24'>
+      <div>
+        <Banner images={[image1, image2]} />
+      </div>
 
-export default TestCard
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          {tests.length > 0 ? (
+            tests.map((test) => (
+              <TestCard 
+                key={test._id} 
+                Desc={test.description || "No description available"} 
+                Price={test.price || "-"} 
+                Mrp={test.mrp || "-"} 
+                Discount={test.discount || "0%"} 
+              />
+            ))
+          ) : (
+            <div>No tests available.</div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Home;

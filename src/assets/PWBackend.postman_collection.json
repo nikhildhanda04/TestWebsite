@@ -1,0 +1,1721 @@
+{
+	"info": {
+		"_postman_id": "bde28a5e-f4fb-4925-9a3e-6f8aab426ae0",
+		"name": "PWBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22815879",
+		"_collection_link": "https://warped-comet-186825.postman.co/workspace/Development~fee2b6d0-10d9-4914-96c4-8801d63a1dbb/collection/22815879-bde28a5e-f4fb-4925-9a3e-6f8aab426ae0?action=share&source=collection_link&creator=22815879"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Staff",
+					"item": [
+						{
+							"name": "SignUp",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Raj\",\n    \"lastName\": \"kr\",\n    \"email\": \"rajkumar@gmail.com\",\n    \"password\": \"raajkr09\",\n    \"gender\": \"Male\",\n    \"phoneNumber\": 123456781\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pw-backend-livid.vercel.app/api/v1/auth/signup",
+									"protocol": "https",
+									"host": [
+										"pw-backend-livid",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUxZjMxZWEyNzEyZGI4NWJkMDdkZGUiLCJpYXQiOjE3MzQ3MTQxOTAsImV4cCI6MTczNDk3MzM5MH0.IlOe_lgeqEdL2IvtGV6OtvByHH6fKcHJSdAiY_gKxLA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/auth/getUsers?userId=6751f31ea2712db85bd07dde",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"getUsers"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "6751f31ea2712db85bd07dde"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "basic"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"prakash@gmail.com\",\n    \"password\":\"prakash09\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateUserDetails",
+							"request": {
+								"method": "PUT",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Students",
+					"item": [
+						{
+							"name": "SignUp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Raj\",\n    \"lastName\": \"kr\",\n    \"email\": \"rajkumar2@gmail.com\",\n    \"password\": \"raajkr09\",\n    \"gender\": \"Male\",\n    \"phoneNumber\": 123456783\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/auth/studentSignup",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"studentSignup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"rajkumar2@gmail.com\",\n    \"password\":\"raajkr09\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/auth/studentLogin",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"studentLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getStudents",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/auth/getStudents",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"getStudents"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateStudentDetails",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\":\"Raj1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/auth/updateStudentDetails/67861596c885eca9477bd2af",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"updateStudentDetails",
+										"67861596c885eca9477bd2af"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Curriculum",
+			"item": [
+				{
+					"name": "Sections",
+					"item": [
+						{
+							"name": "editSection",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Physics\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/curriculum/editSections/6759d1539d7668d9b4b71c72",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"curriculum",
+										"editSections",
+										"6759d1539d7668d9b4b71c72"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSection",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getSubjects",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getSubjects"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "getCourses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getCourses",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getCourses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addCourse",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzZjNTA2NDVjMjUxZjJhNjNhMWI3ZTUiLCJpYXQiOjE3MzY5NDg0NTAsImV4cCI6MTczNzIwNzY1MH0.GsfYNkmJkwvzTc2FzmR5PP0WUSjV-HF-NSQYwztkD_0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"instructor\": [\n        \"6751f31ea2712db85bd07dde\"\n    ],\n    \"title\": \"A\",\n    \"subTitle\": \"A\",\n    \"category\": \"A\",\n    \"subCategory\": \"A\",\n    \"topic\": \"A\",\n    \"language\": \"A\",\n    \"subtitleLanguage\": \"A\",\n    \"courseDurations\": \"A\",\n    \"featured\": false,\n    \"courseLevels\": \"A\",\n    \"courseId\": \"AB101\",\n    \"actualPrice\": 1000,\n    \"discountedPrice\": 2000,\n    \"isPaid\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/addCourse",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"addCourse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editCourses",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"courseThumbnail\": \"S\",\n    // \"courseTrailer\": \"H\",\n    // \"courseDescription\": \"S\",\n    // \"learnings\": [\n    //     \"C\"\n    // ],\n    // \"targetAudience\": [\n    //     \"C\"\n    // ],\n    // \"requirements\": [\n    //     \"C\"\n    // ]\n    \"welcomeMsg\": \"Hello\",\n    \"congratulationsMsg\": \"Bye 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/updateCourse/67582f5d730ac38366934880",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"updateCourse",
+										"67582f5d730ac38366934880"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCourseId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzg0ZmQzODkzYzE1YzAxNmU0ZjlmZjYiLCJpYXQiOjE3MzY3NzYwNDgsImV4cCI6MTczNzAzNTI0OH0.CLS_tWjx4c5FK1qIpKt5_V83hyIumxSAMWZgc2Vwwxk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"shreyasjakati66@gmail.com\",\r\n    \"password\":\"Shreyas\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getCourseId",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getCourseId"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getParticularCourseWithId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getCourses?id=67582f5d730ac38366934880&category=A&subCategory=A",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getCourses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "67582f5d730ac38366934880"
+										},
+										{
+											"key": "category",
+											"value": "A"
+										},
+										{
+											"key": "subCategory",
+											"value": "A"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "googleMeetLink",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Advanced Physics for JEE\",\n    \"description\": \"A live class on thermodynamics covering advanced problems.\",\n    \"courseId\": \"67582f5d730ac38366934880\",\n    \"subjectId\": \"6759d1539d7668d9b4b71c72\",\n    \"startTime\": \"2025-01-20T10:00:00Z\",\n    \"endTime\": \"2025-01-20T12:00:00Z\",\n    \"createdBy\": \"6751f31ea2712db85bd07dde\",\n    \"courseCategory\": \"NEET\",\n    \"status\": \"UPCOMING\",\n    \"thumbNail\": \"xyz\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getGoogleMeetLink",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getGoogleMeetLink"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getFreeVideos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getFreeVideos?category=JEE",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getFreeVideos"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "JEE"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateLiveClass",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/updateLiveClass/679e025ce9b1231f8179d275?status=CLOSED",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"updateLiveClass",
+										"679e025ce9b1231f8179d275"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "CLOSED"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getLiveClasses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getLiveClasses?courseCategory=JEE",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getLiveClasses"
+									],
+									"query": [
+										{
+											"key": "courseCategory",
+											"value": "JEE"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "parsePdf",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pdfUrl\": \"https://res.cloudinary.com/dzxtkbwbk/image/upload/v1738696900/images/ds6qsjsshtw8gaqb8amm.pdf\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pw-railway-parser-production.up.railway.app/parse-pdf",
+									"protocol": "https",
+									"host": [
+										"pw-railway-parser-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"parse-pdf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getHomeCourse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getHomeCourses?id=679901b73e3c19e8b8be8010",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getHomeCourses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "679901b73e3c19e8b8be8010"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllTestsinCourse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getAllTestsInCourse?courseId=679901b73e3c19e8b8be8010",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getAllTestsInCourse"
+									],
+									"query": [
+										{
+											"key": "courseId",
+											"value": "679901b73e3c19e8b8be8010"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "lectures",
+					"item": [
+						{
+							"name": "editLecture",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Electro 1\",\n    \"notes\": \"xx\",\n    \"description\": \"xx\",\n    \"video\": \"xx\",\n    \"file\": \"xx\",\n    \"captions\": \"xx\",\n    \"status\": \"ACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/curriculum/editLectures/6759d1539d7668d9b4b71c74",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"curriculum",
+										"editLectures",
+										"6759d1539d7668d9b4b71c74"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getHomeLectures",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getLectures?subjectId=67990a733e3c19e8b8be802f",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getLectures"
+									],
+									"query": [
+										{
+											"key": "subjectId",
+											"value": "67990a733e3c19e8b8be802f"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getIndividualLectureDetails",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/course/getLectureDetails?id=679902833e3c19e8b8be801d",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"course",
+										"getLectureDetails"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "679902833e3c19e8b8be801d"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "addCurriculum",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courseId\": \"67582f5d730ac38366934880\",\n    \"data\": [\n        {\n            \"subjectTitle\": \"Physics\",\n            \"lectures\": [\n                {\n                    \"lectureTitle\": \"Electro\",\n                    \"notes\": \"a\",\n                    \"dpp\": \"x\",\n                    \"video\": \"y\",\n                    \"assignment\": \"z\",\n                    \"test\": \"b\"\n                },\n                {\n                    \"lectureTitle\": \"Magnetic\",\n                    \"notes\": \"y\",\n                    \"assignment\": \"t\",\n                    \"video\": \"u\",\n                    \"dpp\": \"i\",\n                    \"test\": \"o\"\n                }\n            ]\n        },\n        {\n            \"subjectTitle\": \"Chemistry\",\n            \"lectures\": [\n                {\n                    \"lectureTitle\": \"Moles\",\n                    \"notes\": \"abc\",\n                    \"assignment\": \"poi\",\n                    \"video\": \"uyt\",\n                    \"test\": \"rew\",\n                    \"dpp\": \"qas\"\n                },\n                {\n                    \"lectureTitle\": \"Organic\",\n                    \"notes\": \"zxc\",\n                    \"assignment\": \"vbn\",\n                    \"video\": \"mlk\",\n                    \"test\": \"jhg\",\n                    \"dpp\": \"fds\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/curriculum/addCurriculum",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"curriculum",
+								"addCurriculum"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assets",
+			"item": [
+				{
+					"name": "UploadImageToCloudinary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzUxZjMxZWEyNzEyZGI4NWJkMDdkZGUiLCJpYXQiOjE3MzQxNjU0MzYsImV4cCI6MTczNDQyNDYzNn0.3D5uEcymjjCq5cqNXPVDfpfIhNhapQl_9JU6BUN5RsI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/shreyasjakati/Desktop/ScreenShots/Screenshot 2024-04-07 at 10.38.22 PM.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/assets/upload/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"assets",
+								"upload",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadVideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/shreyasjakati/Downloads/istockphoto-1956763445-640_adpp_is.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/assets/upload/video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"assets",
+								"upload",
+								"video"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Series",
+			"item": [
+				{
+					"name": "createTestSeries",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Test Series 2\",\n    \"price\": 100,\n    \"sortBy\": 1,\n    \"isEnabled\": 1,\n    \"createdBy\": \"6751f31ea2712db85bd07dde\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/addTestSeries",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"addTestSeries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTestSeries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/getTestSeries?id=678f644466fee6d59947250d",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"getTestSeries"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "678f644466fee6d59947250d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTestSeries",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"ACTIVE\",\n    \"sortBy\": 1,\n    \"title\": \"Test Series\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/updateTestSeries/67682539457745496964fb1f",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"updateTestSeries",
+								"67682539457745496964fb1f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createTests",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"A\",\n    \"testDescription\": \"A\",\n    \"testStatus\": \"A\",\n    \"status\": \"ACTIVE\",\n    \"testSeriesId\": \"67682539457745496964fb1f\",\n    \"noOfQuestions\": 10,\n    \"totalMarks\": 100,\n    \"totalDuration\": 50,\n    \"sortingOrder\": 1,\n    \"allowPdfMaterialDownload\": 1,\n    \"startDate\": \"2024-12-11\",\n    \"endDate\": \"2024-12-11\",\n    \"testMaterial\": \"x\",\n    \"sections\": [\n        {\n            \"title\": \"B\",\n            \"negativeMarking\": 0,\n            \"marksPerQuestion\": 1,\n            \"isOptional\": 1,\n            \"isFixedTiming\": 1,\n            \"questions\": [\n                {\n                    \"question\": \"Testing Boss\",\n                    \"options\": [\n                        {\n                            \"name\": \"A\",\n                            \"image\": \"ABCD\"\n                        },\n                        {\n                            \"name\": \"B\"\n                        }\n                    ],\n                    \"image\": \"xyz\",\n                    \"correctAns\": \"A\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/addTests",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"addTests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTests",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"AB\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/updateTests/6768251d457745496964fb18",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"updateTests",
+								"6768251d457745496964fb18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTestSeriesWithParticularId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/getTestSeries?id=676d224743dfd6175aca293a",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"getTestSeries"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "676d224743dfd6175aca293a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTestSections",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"A\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/updateTestSections/6768251d457745496964fb1a",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"updateTestSections",
+								"6768251d457745496964fb1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHomeTestSeries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/getHomeTestSeries",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"getHomeTestSeries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/getTests?id=67682539457745496964fb1f",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"getTests"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "67682539457745496964fb1f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTestSections",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/testSeries/getTestSections?id=679145963245cf939d551833",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"testSeries",
+								"getTestSections"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "679145963245cf939d551833"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Referral",
+			"item": [
+				{
+					"name": "addCoupan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"1234\",\n    \"discountPer\": 75,\n    \"discountAmount\": 100,\n    \"createdBy\": \"6751f31ea2712db85bd07dde\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/coupan/addCoupan",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"coupan",
+								"addCoupan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCoupan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/coupan/getCoupan?code=1234",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"coupan",
+								"getCoupan"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCoupan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"discountPer\": 90,\n    \"discountAmount\": 50,\n    \"status\":\"ACTIVE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/coupan/updateCoupan/6770387d82ed761fb551eba1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"coupan",
+								"updateCoupan",
+								"6770387d82ed761fb551eba1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "studentReferral",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentReferrals",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Notification",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"message\":\"test\",\n    \"to\":\"UNPAID\",\n    \"createdBy\":\"6751f31ea2712db85bd07dde\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/dashboard/addNotification",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"addNotification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/dashboard/getNotification",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"getNotification"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Banner",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"file\":\"x\",\n    \"type\":\"y\",\n    \"createdBy\":\"6751f31ea2712db85bd07dde\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/dashboard/addBanner",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"addBanner"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/dashboard/getBanners",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"getBanners"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateBanner",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\":\"ACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/dashboard/updateBanner/6786a8d627f6d152a17a01ce",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"updateBanner",
+										"6786a8d627f6d152a17a01ce"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "FreeVideos",
+					"item": [
+						{
+							"name": "addFreeVideos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"x\",\n    \"freeVideos\": \"y\",\n    \"thumbnailLink\": \"z\",\n    \"videoLink\": \"a\",\n    \"createdBy\": \"6751f31ea2712db85bd07dde\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/dashboard/addFreeVideos",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"addFreeVideos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getFreeVideos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/dashboard/getFreeVideos?userId=6751f31ea2712db85bd07dde",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dashboard",
+										"getFreeVideos"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "6751f31ea2712db85bd07dde"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "dashboardData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/dashboard/DashboardData",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"DashboardData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "addPayment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transactionId\": \"123\",\n    \"amount\": 120,\n    \"studentId\": \"67861596c885eca9477bd2af\",\n    \"courseId\": \"6787fb66319f23e31fbb3c9c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/payment/addPayment",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"addPayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPayment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/payment/getPayment",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"getPayment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Queries/Reviews",
+			"item": [
+				{
+					"name": "postQueries",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"X\",\n    \"image\": \"y\",\n    \"studentId\": \"6793565f4be7bfe2017c63b8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/dashboard/addQuery",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"addQuery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQueries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/dashboard/getQueries",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"getQueries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReviews",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"X\",\n    \"review\": \"y\",\n    \"rating\": 3,\n    \"courseId\": \"679901b73e3c19e8b8be8010\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/dashboard/addReview",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"addReview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/dashboard/getReviews",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"getReviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateReview",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"XYZ\",\n    \"rating\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/dashboard/updateReview/679bd2399991214b9dc9433c",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"updateReview",
+								"679bd2399991214b9dc9433c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQueries",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PROD_URL",
+			"value": "https://pw-backend-livid.vercel.app",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
